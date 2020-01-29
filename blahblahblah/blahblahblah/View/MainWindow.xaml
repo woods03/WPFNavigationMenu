@@ -1,0 +1,29 @@
+﻿<Window x:Class="blahblahblah.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:blahblahblah.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Button x:Name="page1OpenBtn" Content="Page1" Click="page1OpenBtn_Click"
+                    Margin="3"/>
+            <Button x:Name="page2OpenBtn" Content="Page2" Click="page2OpenBtn_Click"
+                    Margin="3"/>
+        </StackPanel>
+
+        <Frame Grid.Column="1"
+               x:Name="mainFrame"
+               NavigationUIVisibility="Hidden"
+               Margin="10" 
+               BorderBrush="Green" BorderThickness="2"/>
+    </Grid>
+</Window>

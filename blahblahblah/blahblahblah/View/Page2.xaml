@@ -1,0 +1,21 @@
+﻿<Page x:Class="blahblahblah.View.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:blahblahblah.View"
+      xmlns:vm="clr-namespace:blahblahblah.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2">
+
+    <Grid Background="Blue">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Orientation="Vertical">
+            <TextBlock Text="Page2" FontSize="25"/>
+            <Button Content="Open Page1"
+                    Command="{Binding ChangePage}"/>
+            <TextBlock Text="{Binding Counter,StringFormat={}This Page is opened {0} times}"/>
+        </StackPanel>
+    </Grid>
+</Page>
